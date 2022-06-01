@@ -1,0 +1,15 @@
+{
+  "presets" :[ 
+    ["@babel/preset-env", { "loose": true, "targets": { "esmodules": false, "node": "current" } } ]
+  ]
+  ,
+  "overrides": [{
+    "plugins": [    
+      ["babel-plugin-add-module-exports"],
+      ["@babel/plugin-transform-modules-commonjs", {
+        "allowTopLevelThis": true,
+        "importInterop": "node"
+      }]
+    ]
+  }]
+}
